@@ -8,7 +8,6 @@
     "pages/addFunction/addFunction",
     "pages/deployFunctions/deployFunctions",
     "pages/chooseLib/chooseLib"
-    
   ],
   "permission": {
     "scope.userLocation": {
@@ -27,17 +26,20 @@
     "color": "#a9b7b7",
     "selectedColor": "#11d13f",
     "borderStyle": "black",
-    "list": [{
-      "selectedIconPath": "images/user_selected.png",
-      "iconPath": "images/user.png",
-      "pagePath": "pages/index/index",
-      "text": "首页"
-    },
-    {
-      "selectedIconPath": "images/weather_selected.png",
-      "iconPath": "images/weather.png",
-      "pagePath": "pages/weatherFunction/weatherFunction",
-      "text": "天气"
-    }
-    ]}
+    "list": [
+      {
+        "selectedIconPath": "images/user_selected.png",
+        "iconPath": "images/user.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/weather_selected.png",
+        "iconPath": "images/weather.png",
+        "pagePath": "pages/weatherFunction/weatherFunction",
+        "text": "天气"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
 }

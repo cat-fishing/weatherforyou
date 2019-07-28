@@ -1,6 +1,6 @@
 var formatdate = function(date){
-  if(date.lenght == 0 || date == undefined){return;}
-  if(date.length >= 10){
+  if(date.length == 0 || date == undefined){return;}
+  if (date.length >= 10){
     if (date.substring(5).charAt(0) == '0') { 
       return date.substring(6).replace("-", "/");
     }else{
@@ -12,7 +12,7 @@ var formatdate = function(date){
 }
 
 var formattem = function(tem){
-  if(tem.lenght == 0 || tem == undefined){return;}
+  if (tem.length == 0 || tem == undefined){return;}
   return tem.replace("℃", "°");
 
 }
