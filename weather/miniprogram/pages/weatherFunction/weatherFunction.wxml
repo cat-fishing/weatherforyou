@@ -2,7 +2,8 @@
 <wxs src = "../../utils/format.wxs" module = "format"/>
 <navigation title="小猫钓鱼" showIcon="true"></navigation>
 <view class="bcg">
-  <image src="../../images/avengers.png" mode='aspectFill'></image>
+  <image class='img' src="../../images/avengers.png" mode='aspectFill'></image>
+  <view class="content">
   <view class="table" style="margin-top: 0rpx;">
     <view>所在城市:{{city}}</view>
     <text decode="{{true}}">{{data[0].wea}}&nbsp;{{format.formattem(data[0].tem1)}}/{{format.formattem(data[0].tem2)}}</text>
@@ -33,5 +34,6 @@
   <view wx:for="{{data[0].hours}}">
     <view>{{item.day}}/{{format.formattem(item.tem)}}/{{item.wea}}/{{item.win}}/{{item.win_speed}}</view>
   </view>
+</view>
 </view>
 </view>
