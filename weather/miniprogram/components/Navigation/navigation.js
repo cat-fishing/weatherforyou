@@ -9,7 +9,7 @@ Component({
     //是否展示返回和主页按钮
     showIcon: {
       type: Boolean,
-      default: true
+      default: false
     }
   },
 

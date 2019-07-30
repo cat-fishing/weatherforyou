@@ -1,7 +1,6 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/weatherFunction/weatherFunction",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
     "pages/databaseGuide/databaseGuide",
@@ -15,31 +14,11 @@
     }
   },
   "window": {
-    "backgroundColor": "#F6F6F6",
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#40a7e7",
     "navigationBarTitleText": "小猫钓鱼",
-    "navigationBarTextStyle": "black",
+    "navigationBarTextStyle": "white",
     "navigationStyle": "custom"
-  },
-  "tabBar": {
-    "color": "#a9b7b7",
-    "selectedColor": "#11d13f",
-    "borderStyle": "black",
-    "list": [
-      {
-        "selectedIconPath": "images/user_selected.png",
-        "iconPath": "images/user.png",
-        "pagePath": "pages/index/index",
-        "text": "首页"
-      },
-      {
-        "selectedIconPath": "images/weather_selected.png",
-        "iconPath": "images/weather.png",
-        "pagePath": "pages/weatherFunction/weatherFunction",
-        "text": "天气"
-      }
-    ]
   },
   "sitemapLocation": "sitemap.json"
 }

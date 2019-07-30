@@ -2,7 +2,7 @@
 <wxs src = "../../utils/format.wxs" module = "format"/>
 <navigation title="小猫钓鱼" showIcon="true"></navigation>
 <view class="bcg">
-  <image class='img' src="../../images/avengers.png" mode='aspectFill'></image>
+  <image class='img' src="../../images/nezha.jpg" mode='scaleToFill'></image>
   <view class="content">
   <view class="table" style="margin-top: 0rpx;">
     <view>所在城市:{{city}}</view>
