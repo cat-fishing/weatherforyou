@@ -5,9 +5,10 @@
 <view class="bcg">
   <image class='img' src="../../images/nezha.jpg" mode='scaleToFill'></image>
   <view class="content">
-    <view class="table" style="margin-top: 0rpx;">
-      <view>所在城市:{{city}}</view>
-      <text decode="{{true}}">{{data[0].wea}}&nbsp;{{format.formattem(data[0].tem1)}}/{{format.formattem(data[0].tem2)}}</text>
+    <view class=" now" style="margin-top: 0rpx;">
+      <view class="city">{{city}}</view>
+      <view class="temp">{{format.formattem(data[0].tem)}}</view>
+      <view class="weather"><text>{{data[0].wea}}\t{{format.formattemp(data[0].tem1)}}/{{format.formattemp(data[0].tem2)}}℃</text></view>
     </view>
 
     <view class="table">  

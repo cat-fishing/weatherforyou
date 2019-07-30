@@ -14,10 +14,15 @@ var formatdate = function(date){
 var formattem = function(tem){
   if (tem.length == 0 || tem == undefined){return;}
   return tem.replace("℃", "°");
+}
 
+var formattemp = function (tem) {
+  if (tem.length == 0 || tem == undefined) { return; }
+  return tem.replace("℃", " ");
 }
 
 module.exports = {
   formatdate: formatdate,
-  formattem: formattem
+  formattem: formattem,
+  formattemp: formattemp
   }
