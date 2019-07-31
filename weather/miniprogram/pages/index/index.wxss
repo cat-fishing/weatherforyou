@@ -13,10 +13,11 @@ page{
 .bcg{
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
 }
 
 .content{
-  position: fixed;
+  position: relative;
   z-index: 3;
   height:100%;
   width: 100%;
@@ -95,4 +96,14 @@ page{
   border-right: 2rpx solid rgba(250, 250, 250, 0.2);
 }
 
+.hours{
+  padding-left: 10rpx;
+}
 
+.air{
+  padding-left: 10rpx;
+}
+
+.wind{
+  padding-left: 10rpx;
+}
