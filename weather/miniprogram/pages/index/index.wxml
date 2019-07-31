@@ -13,7 +13,7 @@
 
     <view class="table">  
       <view class="container">
-        <view class="tr" wx:for="{{data}}">
+        <view class="tr" wx:for="{{data}}" wx:key="{{index}}">
         <view class="th">
           <text class="td" decode="{{true}}">{{format.formatdate(item.date)}}\n{{item.week}}\n{{format.formattem(item.tem1)}}/{{format.formattem(item.tem2)}}</text>
           </view> 
@@ -33,7 +33,7 @@
     </view>
 
     <view class="table hours">
-      <view wx:for="{{data[0].hours}}">
+      <view wx:for="{{data[0].hours}}" wx:key="{{index}}">
         <view>{{item.day}}/{{format.formattem(item.tem)}}/{{item.wea}}/{{item.win}}/{{item.win_speed}}</view>
       </view>
     </view>
