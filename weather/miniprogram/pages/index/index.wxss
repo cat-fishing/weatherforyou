@@ -35,9 +35,9 @@ page{
 }
 
 .city{
-  font-size: 40rpx;
+  font-size: 35rpx;
   text-align: left;
-  padding-left: 10rpx; 
+  padding-left: 40rpx; 
   width: 100%;
 }
 
@@ -48,7 +48,7 @@ page{
 }
 
 .weather{
-  font-size: 40rpx;
+  font-size: 30rpx;
   text-align: center;
   width: 100%;
 }
@@ -65,7 +65,7 @@ page{
 }
 
 .table{
-  font-size: 30rpx;
+  font-size: 25rpx;
   margin-top: 20rpx;
   width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -87,7 +87,6 @@ page{
   justify-content: center;
   text-align: center;
   align-items: center
-
 }
 
 .tr{
