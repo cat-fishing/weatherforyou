@@ -6,22 +6,16 @@ page{
   -webkit-font-smoothing: antialiased;
   background: #f6f6f6;
   color: #fff;
-  height:100%;
-  width: 100%;
 }
 /*页面滚动*/
 .bcg{
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
-  overflow: scroll;
 }
 
 .content{
   position: relative;
   z-index: 3;
-  height:100%;
-  width: 100%;
 }
 
 .now{
@@ -29,7 +23,6 @@ page{
   flex-direction: column;
   position: relative;
   width: 100%;
-
   justify-content: center;
   align-items: center;
 }
@@ -39,6 +32,14 @@ page{
   text-align: left;
   padding-left: 40rpx; 
   width: 100%;
+}
+
+.update_time{
+  font-size: 25rpx;
+  text-align: left;
+  padding-left: 40rpx; 
+  width: 100%;
+  color: rgba(255, 255, 255, .5);
 }
 
 .temp{
@@ -82,7 +83,6 @@ page{
   width:100%;
   flex-direction:row;
   zoom:1;
-  overflow:hidden;
   height: 300rpx;
   justify-content: center;
   text-align: center;
@@ -99,7 +99,23 @@ page{
 }
 
 .hours{
-  padding-left: 10rpx;
+  position:relative;
+  font-size: 25rpx;
+  display: flex;
+  flex-direction: row;
+  background:rgba(0,0,0,.3);
+  margin-top: 20rpx;
+  overflow-x: scroll;
+}
+
+.hour{
+  width:170rpx;
+  text-align: center;
+  align-items: center;
+}
+
+.detail{
+  padding:10rpx 0;
 }
 
 .air{

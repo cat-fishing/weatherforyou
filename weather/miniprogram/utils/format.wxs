@@ -1,8 +1,9 @@
+//格式化年月日时间
 var formatdate = function(date){
   if(date.length == 0 || date == undefined){return;}
   if (date.length >= 10){
     if (date.substring(5).charAt(0) == '0') { 
-      return date.substring(6).replace("-", "/");
+      return date.substring(6).replace("-", "月")+"日";
     }else{
       return date.substring(5).replace("-", "/");
     }
@@ -10,19 +11,27 @@ var formatdate = function(date){
     return date;
   }
 }
-
+//格式化温度单位为圈圈
 var formattem = function(tem){
   if (tem.length == 0 || tem == undefined){return;}
   return tem.replace("℃", "°");
 }
-
+//格式化温度单位为空
 var formattemp = function (tem) {
   if (tem.length == 0 || tem == undefined) { return; }
   return tem.replace("℃", " ");
+}
+//格式化年月日时分秒时间
+var formatupdatetime = function(update_time){
+  if (update_time.length == 0 || update_time == undefined) { return; }
+  var result;
+  result = update_time.substring(10);
+  return result.substring(0, result.lastIndexOf(":"));
 }
 
 module.exports = {
   formatdate: formatdate,
   formattem: formattem,
-  formattemp: formattemp
+  formattemp: formattemp,
+  formatupdatetime: formatupdatetime
   }
