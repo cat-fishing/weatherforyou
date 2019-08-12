@@ -99,27 +99,24 @@ page{
 }
 
 .hours{
-  position:relative;
   font-size: 25rpx;
   display: flex;
   flex-direction: row;
   background:rgba(0,0,0,.3);
   margin-top: 20rpx;
+  white-space: nowrap;
   overflow-x: scroll;
 }
 
 .hour{
-  width:170rpx;
+  width:20%;
   text-align: center;
   align-items: center;
+  padding-left: 10rpx;
 }
 
 .detail{
-  padding:10rpx 0;
-}
-
-.air{
-  padding-left: 10rpx;
+  padding:10rpx 10rpx 0 0;
 }
 
 .wind{
