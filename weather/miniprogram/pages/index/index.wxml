@@ -34,7 +34,13 @@
         <view class="detail">{{item.win_speed}}</view>
       </view>
     </view>
-
+<!--天气指数-->
+    <view class="indexs">
+      <view class="index" wx:for="{{data[0].index}}" wx:key="{{index}}">
+        <view class="title">{{index==1?"运动指数":item.title}} {{index==1?"":item.level}}</view>
+        <view class="desc">{{item.desc}}</view>
+      </view>
+    </view>
   </view>
 </view>
 
