@@ -1,7 +1,7 @@
 //index.js
 //index.js
 const app = getApp()
-
+const amapFile = require('../../utils/amap-wx.js')
 Page({
   /**
    * 页面的初始数据
@@ -19,12 +19,14 @@ Page({
   onLoad: function (options) {
     var that = this
     var rescity = ""
-    //微信信息
-    wx.getLocation({
-      type: 'gcj02', // 返回可以用于wx.openLocation的经纬度
+    //微信信息,原百度定位，废弃，留作备用，定位不准
+    /*wx.getLocation({
+      type: 'gcj02', // 返回可以用于wx.openLocation的经纬度gcj02
       success(res) {
         const latitude = res.latitude
         const longitude = res.longitude
+        console.log(latitude)
+        console.log(longitude)
         //根据经纬度去百度地图查所在城市名字
         wx.request({
           url: 'https://api.map.baidu.com/geocoder/v2/?ak=01RqeOtj8bXS9vlmHUGKNBNPbnESnzvv&location=' + latitude + ',' + longitude + '&output=json',
@@ -37,6 +39,14 @@ Page({
           },
           fail: function () { },
           complete: function () { }
+        })
+      }
+    })*/
+    var myAmapFun = new amapFile.AMapWX({ key: 'ba7a00c113fe3d73982f8e2d6bc36c9a' });
+    myAmapFun.getRegeo({
+      success: (res) => {
+        this.setData({
+          city: res[0].regeocodeData.addressComponent.city
         })
       }
     })
@@ -52,7 +62,6 @@ Page({
       success(res) {
         console.log(res.data.data)
         that.setData({
-          city: res.data.city,
           update_time: res.data.update_time,
           data: res.data.data
         })
