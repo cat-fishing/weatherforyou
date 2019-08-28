@@ -50,11 +50,13 @@ Page({
         })
       }
     })
-    //天气预报请求
+    //天气预报请求,第三方天气接口2019-08新增参数
     wx.request({
       url: 'https://www.tianqiapi.com/api/',
       data: {
         version: 'v1',
+        appid: '16895876',
+        appsecret:'MKfCY6dk',
         city: rescity,
       },
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
