@@ -15,15 +15,15 @@
       <view class="weather">{{data[0].wea}}</view>
     </view>
 <!--未来七天天气-->
-    <view class="table">  
-      <view class="container">
-        <view class="tr" wx:for="{{data}}" wx:key="{{index}}">
-        <view class="th">
-          <text class="td" decode="{{true}}">{{index==0?"今天":item.week}}\n{{format.formatdate(item.date)}}\n{{format.formattem(item.tem1)}}/{{format.formattem(item.tem2)}}</text>
-          </view> 
-        </view>
+    <view class="table">
+      <view class="container" wx:for="{{data}}" wx:key="{{index}}">
+        <view class="block">{{index==0?"今天":item.week}}</view>
+        <view class="block">{{format.formatdate(item.date)}}</view>
+        <view class="block">{{item.wea}}</view>
+        <view class="block">{{format.formattem(item.tem1)}}/{{format.formattem(item.tem2)}}</view>
       </view>
     </view>
+
 <!--每三小时天气-->
     <view class="hours">
       <view class="hour" wx:for="{{data[0].hours}}" wx:key="{{index}}">

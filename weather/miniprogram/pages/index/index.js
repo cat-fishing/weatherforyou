@@ -19,30 +19,7 @@ Page({
   onLoad: function (options) {
     var that = this
     var rescity = ""
-    //微信信息,原百度定位，废弃，留作备用，定位不准
-    /*wx.getLocation({
-      type: 'gcj02', // 返回可以用于wx.openLocation的经纬度gcj02
-      success(res) {
-        const latitude = res.latitude
-        const longitude = res.longitude
-        console.log(latitude)
-        console.log(longitude)
-        //根据经纬度去百度地图查所在城市名字
-        wx.request({
-          url: 'https://api.map.baidu.com/geocoder/v2/?ak=01RqeOtj8bXS9vlmHUGKNBNPbnESnzvv&location=' + latitude + ',' + longitude + '&output=json',
-          data: {},
-          header: {
-            'Content-Type': 'application/json'
-          },
-          success: function (res) {
-            rescity = res.data.result.addressComponent.city;
-          },
-          fail: function () { },
-          complete: function () { }
-        })
-      }
-    })*/
-    var myAmapFun = new amapFile.AMapWX({ key: 'ba7a00c113fe3d73982f8e2d6bc36c9a' });
+    var myAmapFun = new amapFile.AMapWX({ key: '' });
     myAmapFun.getRegeo({
       success: (res) => {
         this.setData({
@@ -54,9 +31,9 @@ Page({
     wx.request({
       url: 'https://www.tianqiapi.com/api/',
       data: {
-        version: 'v1',
-        appid: '16895876',
-        appsecret:'MKfCY6dk',
+        version: '',
+        appid: '',
+        appsecret:'',
         city: rescity,
       },
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
