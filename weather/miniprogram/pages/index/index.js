@@ -19,7 +19,7 @@ Page({
   onLoad: function (options) {
     var that = this
     var rescity = ""
-    var myAmapFun = new amapFile.AMapWX({ key: '' });
+    var myAmapFun = new amapFile.AMapWX({ key: 'ba7a00c113fe3d73982f8e2d6bc36c9a' });
     myAmapFun.getRegeo({
       success: (res) => {
         this.setData({
@@ -31,9 +31,9 @@ Page({
     wx.request({
       url: 'https://www.tianqiapi.com/api/',
       data: {
-        version: '',
-        appid: '',
-        appsecret:'',
+        version: 'v1',
+        appid: '16895876',
+        appsecret:'MKfCY6dk',
         city: rescity,
       },
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT

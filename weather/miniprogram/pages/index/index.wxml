@@ -12,7 +12,7 @@
       <view class="city">{{city}}</view>
       <view class="update_time">{{format.formatupdatetime(update_time)}}更新</view>
       <view class="temp">{{format.formattem(data[0].tem)}}<text style="font-size:30rpx;">空气{{data[0].air_level}}</text></view>
-      <view class="weather">{{data[0].wea}}</view>
+      <view class="weather">{{data[0].wea}}/湿度{{data[0].humidity}}</view>
     </view>
 <!--未来七天天气-->
     <view class="table">
@@ -27,8 +27,8 @@
 <!--每三小时天气-->
     <view class="hours">
       <view class="hour" wx:for="{{data[0].hours}}" wx:key="{{index}}">
-        <view class="detail">{{item.day}}</view>
-        <view class="detail">{{format.formattem(item.tem)}}</view>
+        <view class="detail">{{item.hours}}</view>
+        <view class="detail">{{format.formattem(item.tem)}}°</view>
         <view class="detail">{{item.wea}}</view>
         <view class="detail">{{item.win}}</view>
         <view class="detail">{{item.win_speed}}</view>
