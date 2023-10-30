@@ -39,6 +39,7 @@ Page({
         })
       }
     })
+
         //天气预报请求
     wx.request({
       url: 'https://www.tianqiapi.com/api/', 

@@ -16,8 +16,8 @@
     </view>
 <!--未来七天天气-->
     <view class="table">
-      <view class="container" wx:for="{{data}}" wx:key="{{index}}">
-        <view class="block">{{index==0?"今天":item.week}}</view>
+      <view class="container" wx:for="{{data}}" wx:key="days">
+        <view class="block">{{days==0?"今天":item.week}}</view>
         <view class="block">{{format.formatdate(item.date)}}</view>
         <view class="block">{{item.wea}}</view>
         <view class="block">{{format.formattem(item.tem1)}}/{{format.formattem(item.tem2)}}</view>
@@ -26,7 +26,7 @@
 
 <!--每三小时天气-->
     <view class="hours">
-      <view class="hour" wx:for="{{data[0].hours}}" wx:key="{{index}}">
+      <view class="hour" wx:for="{{data[0].hours}}" wx:key="hours">
         <view class="detail">{{item.hours}}</view>
         <view class="detail">{{format.formattem(item.tem)}}°</view>
         <view class="detail">{{item.wea}}</view>
@@ -36,7 +36,7 @@
     </view>
 <!--天气指数-->
     <view class="indexs">
-      <view class="index" wx:for="{{data[0].index}}" wx:key="{{index}}">
+      <view class="index" wx:for="{{data[0].index}}" wx:key="index">
         <view class="title">{{index==1?"运动指数":item.title}} {{index==1?"":item.level}}</view>
         <view class="desc">{{item.desc}}</view>
       </view>
